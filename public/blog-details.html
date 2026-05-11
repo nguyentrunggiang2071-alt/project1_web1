@@ -1,0 +1,460 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://flowbite.com/docs/main.css?v=4.0.1"
+      id="theme"
+    />
+    <title>Web1 Project - Blogs</title>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --font-heading: "Changa One", cursive;
+        --font-body: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      }
+
+      @layer base {
+        body {
+          @apply font-body;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        nav a {
+          @apply font-heading;
+        }
+      }
+
+      @layer components {
+        .active {
+          @apply !text-cyan-600;
+        }
+        footer .active {
+          @apply !text-pink-300;
+        }
+        .read-more {
+          @apply !text-cyan-600 underline text-sm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="bg-neutral-primary w-full z-20 top-0 start-0">
+        <div
+          class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a
+            href="index.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img src="./images/logo.png" class="h-18" alt="Flowbite Logo" />
+          </a>
+          <div class="flex items-center md:order-2">
+            <button
+              type="button"
+              data-collapse-toggle="navbar-search"
+              aria-controls="navbar-search"
+              aria-expanded="false"
+              class="flex items-center justify-center md:hidden text-body hover:text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-2 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm w-10 h-10 focus:outline-none"
+            >
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                />
+              </svg>
+              <span class="sr-only">Search</span>
+            </button>
+            <label for="input-group-1" class="sr-only">Your Email</label>
+            <div class="relative hidden md:block">
+              <div
+                class="absolute inset-y-0 end-2 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-green-500!"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <form action="blogs.html">
+                <input
+                  type="text"
+                  id="input-group-1"
+                  name="keyword"
+                  class="block w-full ps-4 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-full focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body"
+                  placeholder="Search"
+                />
+              </form>
+            </div>
+            <button
+              data-collapse-toggle="navbar-search"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
+              aria-controls="navbar-search"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  d="M5 7h14M5 12h14M5 17h14"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-search"
+          >
+            <div class="relative mt-3 md:hidden">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-green-500!"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <form action="blogs.html">
+                <input
+                  type="text"
+                  id="input-group-2"
+                  name="keyword"
+                  class="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body"
+                  placeholder="Search"
+                />
+              </form>
+            </div>
+            <ul
+              class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="block py-2 px-3 text-grey-600 rounded md:bg-transparent md:p-0 md:hover:text-cyan-600!"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="block py-2 px-3 text-heading rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-3 text-heading rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blogs.html"
+                  class="block py-2 px-3 text-heading rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent active"
+                  aria-current="page"
+                  >Blogs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="block py-2 px-3 text-heading rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="register.html"
+                  class="block py-2 px-3 text-heading rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogout"
+                  >Register</a
+                >
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-heading rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogin"
+                  >Profile</a
+                >
+              </li>
+              <li>
+                <a
+                  href="login.html"
+                  class="block py-2 px-3 text-heading rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogout"
+                  >Login</a
+                >
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-heading rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogin logout-btn"
+                  >Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section
+      class="w-full bg-[url('images/bg-banner.gif')] bg-repeat h-2 block"
+    ></section>
+
+    <!-- Blogs -->
+    <section class="max-w-7xl mx-auto p-8">
+      <div class="flex flex-col md:grid md:grid-cols-[6.5fr_3.5fr] gap-8">
+        <div class="order-2 md:order-1">
+          <div id="blog"></div>
+        </div>
+        <div class="order-1 md:order-2">
+          <h1 class="font-heading text-7xl mb-4">Categories</h1>
+          <ul class="max-w-md space-y-2 text-body list-inside">
+            <li class="flex items-center">
+              <img src="images/marker1.png" alt="" class="me-2" />
+              <a href="blogs.html">Show All</a>
+            </li>
+            <li class="flex items-center">
+              <img src="images/marker1.png" alt="" class="me-2" />
+              <a href="blogs.html">Category 1</a>
+            </li>
+            <li class="flex items-center">
+              <img src="images/marker1.png" alt="" class="me-2" />
+              <a href="blogs.html">Category 2</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="w-full bg-[url('images/bg-footer.gif')] bg-repeat bg-gray-600 text-white text-center py-4"
+    >
+      <nav class="max-w-7xl mx-auto flex items-center justify-center p-4">
+        <ul
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="block py-2 px-3 text-white rounded md:bg-transparent md:p-0"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="block py-2 px-3 text-white rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-pink-300! md:p-0 md:dark:hover:bg-transparent"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="gallery.html"
+              class="block py-2 px-3 text-white rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-pink-300! md:p-0 md:dark:hover:bg-transparent"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a
+              href="blogs.html"
+              class="block py-2 px-3 text-white rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-pink-300! md:p-0 md:dark:hover:bg-transparent active"
+              aria-current="page"
+              >Blogs</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="block py-2 px-3 text-white rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-pink-300! md:p-0 md:dark:hover:bg-transparent"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="register.html"
+              class="block py-2 px-3 text-white rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogout"
+              >Register</a
+            >
+            <a
+              href="#"
+              class="block py-2 px-3 text-white rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogin"
+              >Profile</a
+            >
+          </li>
+          <li>
+            <a
+              href="login.html"
+              class="block py-2 px-3 text-white rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogout"
+              >Login</a
+            >
+            <a
+              href="#"
+              class="block py-2 px-3 text-white rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogin logout-btn"
+              >Logout</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="text-center">
+        Copyright &copy; 2026 by MSSV: 24880019 - Ho ten: Nguyễn Trung Giang
+      </div>
+    </footer>
+
+    <script src="https://flowbite.com/docs/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+    <script src="js/helpers/handlebars-formatDate-helper.js"></script>
+
+    <script id="blog-template" type="text/x-handlebars-template">
+      {{#with data.data}}
+        <div class="py-4">
+          <h2 class="font-heading text-3xl">
+            <a href="#">{{title}}</a>
+          </h2>
+          <p class="py-4">
+            by
+            {{#if author}}{{author.name}}{{else}}Anonymous{{/if}}
+            in
+            <a href="blogs.html?category={{category_id}}">{{category.name}}</a>
+            on
+            {{formatDate created_at}}
+            <a href="blog-details.html#comments">Comments ({{comments.length}})</a>
+          </p>
+          <a href="#"><img
+              src="{{imagepath}}"
+              alt="BlogTitle"
+              class="block w-full mb-8 me-8 rounded-xl"
+            /></a>
+          <div class="text-justify">
+            {{{description}}}
+          </div>
+        </div>
+
+        <form>
+          <h2 class="font-heading text-3xl pb-8">Leave a comment</h2>
+          <div class="mb-6">
+            <label
+              for="message"
+              class="block mb-2.5 text-sm font-medium text-heading"
+            >Your message</label>
+            <textarea
+              id="message"
+              rows="4"
+              class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body"
+              placeholder="Write your thoughts here..."
+            ></textarea>
+          </div>
+          <div class="float-start flex items-start mb-6">
+            <div class="flex items-center h-5">
+              <input
+                id="remember"
+                type="checkbox"
+                value=""
+                class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft"
+                required
+              />
+            </div>
+            <label
+              for="remember"
+              class="ms-2 text-sm font-medium text-heading"
+            >I agree with the
+              <a href="#" class="text-fg-brand hover:underline">terms and
+                conditions</a>.</label>
+          </div>
+          <button
+            type="submit"
+            class="float-end text-white bg-cyan-600 box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none mb-4"
+          >
+            Submit
+          </button>
+        </form>
+
+        <div class="clear-both">
+          <div class="bg-heading text-white py-2 px-4 rounded-xl">
+            Comments ({{comments.length}})
+          </div>
+          {{#each comments}}
+            <div class="py-4">
+              <p><span class="me-8 font-semibold">{{#if
+                    author
+                  }}{{author.name}}{{else}}
+                    Anonymous{{/if}}</span><span class="float-end">{{formatDate
+                    created_at
+                  }}</span></p>
+              <p class="text-justify py-4 clear-end">{{message}}</p>
+            </div>
+          {{/each}}
+        </div>
+      {{/with}}
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/24880019.js"></script>
+    <script src="js/api/database.js"></script>
+
+    <script>
+      (async function () {
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+
+        const blog = await fetchBlogById(id);
+        console.log(blog);
+        renderView("blog-template", "blog", { data: blog });
+      })();
+    </script>
+  </body>
+</html>

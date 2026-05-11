@@ -1,0 +1,516 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://flowbite.com/docs/main.css?v=4.0.1"
+      id="theme"
+    />
+    <title>Web1 Project - About</title>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --font-heading: "Changa One", cursive;
+        --font-body: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      }
+
+      @layer base {
+        body {
+          @apply font-body;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        nav a {
+          @apply font-heading;
+        }
+      }
+
+      @layer components {
+        .active {
+          @apply !text-cyan-600;
+        }
+        footer .active {
+          @apply !text-pink-300;
+        }
+        .read-more {
+          @apply !text-cyan-600 underline text-sm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="bg-neutral-primary w-full z-20 top-0 start-0">
+        <div
+          class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a
+            href="index.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img src="./images/logo.png" class="h-18" alt="Flowbite Logo" />
+          </a>
+          <div class="flex items-center md:order-2">
+            <button
+              type="button"
+              data-collapse-toggle="navbar-search"
+              aria-controls="navbar-search"
+              aria-expanded="false"
+              class="flex items-center justify-center md:hidden text-body hover:text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-2 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm w-10 h-10 focus:outline-none"
+            >
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                />
+              </svg>
+              <span class="sr-only">Search</span>
+            </button>
+            <label for="input-group-1" class="sr-only">Your Email</label>
+            <div class="relative hidden md:block">
+              <div
+                class="absolute inset-y-0 end-2 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-green-500!"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <form action="search.html">
+                <input
+                  type="text"
+                  id="input-group-1"
+                  name="keyword"
+                  class="block w-full ps-4 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-full focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body"
+                  placeholder="Search"
+                />
+              </form>
+            </div>
+            <button
+              data-collapse-toggle="navbar-search"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
+              aria-controls="navbar-search"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  d="M5 7h14M5 12h14M5 17h14"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-search"
+          >
+            <div class="relative mt-3 md:hidden">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-green-500!"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <form action="search.html">
+                <input
+                  type="text"
+                  id="input-group-2"
+                  name="keyword"
+                  class="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body"
+                  placeholder="Search"
+                />
+              </form>
+            </div>
+            <ul
+              class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="block py-2 px-3 text-grey-600 bg-brand rounded md:bg-transparent md:p-0"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent active"
+                  aria-current="page"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blogs.html"
+                  class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent"
+                  >Blogs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="register.html"
+                  class="block py-2 px-3 text-heading rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogout"
+                  >Register</a
+                >
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-heading rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogin"
+                  >Profile</a
+                >
+              </li>
+              <li>
+                <a
+                  href="login.html"
+                  class="block py-2 px-3 text-heading rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogout"
+                  >Login</a
+                >
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-heading rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogin logout-btn"
+                  >Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section
+      class="w-full bg-[url('images/bg-banner.gif')] bg-repeat h-2 block"
+    ></section>
+
+    <section class="max-w-7xl mx-auto py-8 px-8">
+      <div class="grid md:grid-cols-[6.5fr_3.5fr] gap-8">
+        <div id="aboutus"></div>
+        <div>
+          <h1 class="font-heading text-7xl mb-6">Our Vision</h1>
+          <div id="visions"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full bg-pink-300 p-8">
+      <div class="max-w-7xl mx-auto">
+        <h1 class="text-7xl font-heading text-white mb-8">Testimonials</h1>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-8"
+          id="testimonials"
+        ></div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto p-8">
+      <h1 class="font-heading text-7xl mb-8">Our Team</h1>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"
+        id="team"
+      >
+        <div>
+          <a href="details.html"
+            ><img
+              src="images/our-team/team-1.jpg"
+              alt=""
+              class="rounded-2xl w-full"
+          /></a>
+          <a href="details.html">
+            <h2 class="text-3xl font-heading py-4 hover:highlight">Name</h2>
+          </a>
+          <p class="text-justify">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea,
+            libero!
+          </p>
+        </div>
+        <div>
+          <a href="details.html"
+            ><img
+              src="images/our-team/team-2.jpg"
+              alt=""
+              class="rounded-2xl w-full"
+          /></a>
+          <a href="details.html">
+            <h2 class="text-3xl font-heading py-4 hover:highlight">Name</h2>
+          </a>
+          <p class="text-justify">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea,
+            libero!
+          </p>
+        </div>
+        <div>
+          <a href="details.html"
+            ><img
+              src="images/our-team/team-3.jpg"
+              alt=""
+              class="rounded-2xl w-full"
+          /></a>
+          <a href="details.html">
+            <h2 class="text-3xl font-heading py-4 hover:highlight">Name</h2>
+          </a>
+          <p class="text-justify">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea,
+            libero!
+          </p>
+        </div>
+        <div>
+          <a href="details.html"
+            ><img
+              src="images/our-team/team-4.jpg"
+              alt=""
+              class="rounded-2xl w-full"
+          /></a>
+          <a href="details.html">
+            <h2 class="text-3xl font-heading py-4 hover:highlight">Name</h2>
+          </a>
+          <p class="text-justify">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea,
+            libero!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="w-full bg-[url('images/bg-footer.gif')] bg-repeat bg-gray-600 text-white text-center py-4"
+    >
+      <nav class="max-w-7xl mx-auto flex items-center justify-center p-4">
+        <ul
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:p-0"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="block py-2 px-3 text-white rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-pink-300! md:p-0 md:dark:hover:bg-transparent active"
+              aria-current="page"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="gallery.html"
+              class="block py-2 px-3 text-white rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-pink-300! md:p-0 md:dark:hover:bg-transparent"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a
+              href="blogs.html"
+              class="block py-2 px-3 text-white rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-pink-300! md:p-0 md:dark:hover:bg-transparent"
+              >Blogs</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="block py-2 px-3 text-white rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-pink-300! md:p-0 md:dark:hover:bg-transparent"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="register.html"
+              class="block py-2 px-3 text-white rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogout"
+              >Register</a
+            >
+            <a
+              href="#"
+              class="block py-2 px-3 text-white rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogin"
+              >Profile</a
+            >
+          </li>
+          <li>
+            <a
+              href="login.html"
+              class="block py-2 px-3 text-white rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogout"
+              >Login</a
+            >
+            <a
+              href="#"
+              class="block py-2 px-3 text-white rounded md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:p-0 md:dark:hover:bg-transparent isLogin logout-btn"
+              >Logout</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="text-center">
+        Copyright &copy; 2026 by MSSV: 24880019 - Ho ten: Nguyễn Trung Giang
+      </div>
+    </footer>
+
+    <script src="https://flowbite.com/docs/flowbite.min.js"></script>
+
+    <!---handlebarJS-->>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+    <script id="aboutus-template" type="text/x-handlebars-template">
+      {{#each data}}
+        <h1 class="font-heading text-7xl mb-8">About us</h1>
+        <div>
+          <a href="details.html?id={{id}}">
+            <img
+              src="{{thumbpath}}"
+              alt=""
+              class="rounded-xl mb-8 me-8 lg:float-start"
+            />
+          </a>
+          <div class="text-justify">{{{summary}}}</div>
+        </div>
+      {{/each}}
+    </script>
+
+    <script id="visions-template" type="text/x-handlebars-template">
+      {{#each data}}
+        <div class="flex mt-4 gap-4">
+          <div class="basis-xs">
+            <a href="details.html?id={{id}}"><img
+                src="{{thumbpath}}"
+                alt=""
+                class="rounded-2xl w-full"
+              /></a>
+          </div>
+          <div class="grow">
+            <a href="details.html?id={{id}}">
+              <h2
+                class="text-3xl font-heading mb-4 hover:highlight"
+              >{{title}}</h2>
+            </a>
+            <p>{{summary}}</p>
+          </div>
+        </div>
+      {{/each}}
+    </script>
+
+    <script id="team-template" type="text/x-handlebars-template">
+      {{#each data}}
+        <div>
+          <a href="details.html?id={{id}}"><img
+              src="{{thumbpath}}"
+              alt=""
+              class="rounded-2xl w-full"
+            /></a>
+          <a href="details.html?id={{id}}">
+            <h2
+              class="text-3xl font-heading py-4 hover:highlight"
+            >{{title}}</h2>
+          </a>
+          <p class="text-justify">{{summary}}</p>
+        </div>
+      {{/each}}
+    </script>
+
+    <script id="testimonials-template" type="text/x-handlebars-template">
+      {{#each data}}
+        <div class="bg-[url('images/quot.png')] bg-top-left bg-no-repeat ps-11">
+          <p class="text-justify">{{message}}</p>
+          <p class="text-white mt-4">{{name}}</p>
+          <a href="mailto:email@mail.com" class="read-more">{{email}}</a>
+        </div>
+      {{/each}}
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/24880019.js"></script>
+    <script src="js/api/database.js"></script>
+
+    <script>
+      (async function () {
+        const [allData, testimonials] = await Promise.all([
+          fetchDataByTypes(["aboutus", "visions", "team"]),
+          fetchTestimonials(),
+        ]);
+
+        const aboutus = allData.filter((d) => d.type == "aboutus");
+        const visions = allData.filter((d) => d.type == "visions");
+        const team = allData.filter((d) => d.type == "team");
+
+        renderView("aboutus-template", "aboutus", aboutus);
+        renderView("visions-template", "visions", visions);
+        renderView("team-template", "team", team);
+
+        renderView("testimonials-template", "testimonials", testimonials);
+      })();
+    </script>
+  </body>
+</html>
