@@ -269,10 +269,10 @@ async function initAuthUI(session) {
 
   document
     .querySelectorAll(".isLogout")
-    .forEach((item) => item.classList.toggle("hidden", isLogin));
+    .forEach((item) => (item.style.display = isLogin ? "none" : ""));
   document
     .querySelectorAll(".isLogin")
-    .forEach((item) => item.classList.toggle("hidden", !isLogin));
+    .forEach((item) => (item.style.display = isLogin ? "" : "none"));
 
   if (!isLogin) return;
 
